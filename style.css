@@ -1,0 +1,232 @@
+/* Grundläggande styling */
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.d-none {
+    display: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    background-color: #f4f4f4;
+}
+
+/* main {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+} */
+
+
+.jumbotron {
+    text-align: center;
+    background: #dedede;
+    padding: 1.5rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    margin-top: 3%;
+}
+
+.col {
+    display: grid;
+    flex-direction: column;  /* Gör att label hamnar ovanför input */
+    margin-bottom: 1em; /* Ger lite mellanrum mellan fälten */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#div-with-a {
+    margin-left: 10px;
+}
+
+input {
+    display: block;
+    width: 100%;
+}
+
+/* Spelplan */
+#game-area table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.ml-auto  {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+td {
+    width: 125px;
+    height: 125px;
+    border: 1px solid darkgray;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* Aside (bilden till höger) */
+aside {
+    display: none;
+}
+
+/* Media query för enhet mindre än 415px */
+@media (max-width: 414px) {
+    body {
+        text-align: center;
+        align-items: center;
+    }
+    
+    main {
+        width: 90%;
+    }
+
+
+    .col {
+        text-align: left;
+    }
+
+    td {
+        width: 100px;
+        height: 100px;
+    }
+
+    #div-in-form {
+        width: 100%;
+        max-width: 800px;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px lightblue;
+        border-radius: 8px;
+    }
+
+    #newGame {
+        color: white;
+        background-color: lightblue;
+        border-radius: 0.5rem;
+        padding: 4px;
+        margin-left: 63%;
+        text-decoration: none;
+    }
+}
+
+/* Media query för enhet mellan 415px och 1181px */
+@media (min-width: 415px) and (max-width: 1180px) {
+
+    * {
+        font-size: 18px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .jumbotron {
+        margin-top: 0%;
+    }
+
+    #div-in-form {
+        box-shadow: 4px 4px 4px 4px lightgray;
+        height: 300px;
+    }
+
+    #newGame {
+        color: white;
+        background-color: lightblue;
+        border-radius: 0.3rem;
+        padding: 7px;
+        text-decoration: none;
+    }
+
+    aside {
+        display: block;
+        width: 30%;
+       
+    }
+    aside img {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+    main {
+        width: 50%;
+        margin-bottom: auto;
+    }
+    td {
+        width: 125px;
+        height: 125px;
+    }
+
+    
+}
+
+/* Media query för enhet större än 1181px */
+@media (min-width: 1181px) {
+
+    *{
+        font-size: 22px;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: repeat(2, 75%);
+        
+    }
+    main {
+        width: 70%;
+        justify-self: center;
+    }
+
+    .jumbotron {
+        margin-top: 0%;
+    }
+
+    #div-in-form {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        grid-template-rows: repeat(3, 37%);
+        gap: 2%;
+        box-shadow: 4px 4px 4px 4px lightgray;
+        height: 300px;
+    }
+
+
+    #newGame {
+        color: lightblue;
+        box-shadow: 1px 1px 1px 1px lightblue;
+        border-radius: 0.3rem;
+        padding: 7px;
+        text-decoration: none;
+    }
+
+    #newGame:hover {
+        cursor: pointer;
+    }
+
+    aside {
+        display: flex;
+        width: 300px;
+    }
+    aside img {
+        width: 100%;
+        height: auto;
+    }
+    td {
+        width: 200px;
+        height: 200px;
+    }
+}
