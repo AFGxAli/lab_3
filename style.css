@@ -112,12 +112,15 @@ aside {
         border-radius: 8px;
     }
 
+    #div-with-a {
+        justify-self: end;
+    }
+
     #newGame {
         color: white;
         background-color: lightblue;
         border-radius: 0.5rem;
         padding: 4px;
-        margin-left: 63%;
         text-decoration: none;
     }
 }
@@ -142,6 +145,11 @@ aside {
     #div-in-form {
         box-shadow: 4px 4px 4px 4px lightgray;
         height: 300px;
+    }
+
+    #div-with-a {
+        justify-self: end;
+        margin-right: 5%;
     }
 
     #newGame {
@@ -183,13 +191,11 @@ aside {
 
     body {
         display: grid;
-        grid-template-columns:1fr 300px;
-        
-        
+        grid-template-columns: repeat(2, 63%);
     }
     main {
         width: 70%;
-        justify-self: center;
+        justify-self:flex-end;
     }
 
     .jumbotron {
